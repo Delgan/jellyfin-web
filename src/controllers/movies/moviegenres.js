@@ -1,7 +1,15 @@
-define(['layoutManager', 'loading', 'libraryBrowser', 'cardBuilder', 'lazyLoader', 'apphost', 'globalize', 'appRouter', 'dom', 'emby-button'], function (layoutManager, loading, libraryBrowser, cardBuilder, lazyLoader, appHost, globalize, appRouter, dom) {
-    'use strict';
+import layoutManager from 'layoutManager';
+import loading from 'loading';
+import libraryBrowser from 'libraryBrowser';
+import cardBuilder from 'cardBuilder';
+import lazyLoader from 'lazyLoader';
+import appHost from 'apphost';
+import globalize from 'globalize';
+import appRouter from 'appRouter';
+import dom from 'dom';
+import 'emby-button';
 
-    return function (view, params, tabContent) {
+export default function (view, params, tabContent) {
         function getPageData() {
             var key = getSavedQueryKey();
             var pageData = data[key];
@@ -205,4 +213,3 @@ define(['layoutManager', 'loading', 'libraryBrowser', 'cardBuilder', 'lazyLoader
             reloadItems(tabContent, promise);
         };
     };
-});

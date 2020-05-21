@@ -1,7 +1,16 @@
-define(['layoutManager', 'loading', 'events', 'libraryBrowser', 'imageLoader', 'alphaPicker', 'listView', 'cardBuilder', 'userSettings', 'globalize', 'emby-itemscontainer'], function (layoutManager, loading, events, libraryBrowser, imageLoader, alphaPicker, listView, cardBuilder, userSettings, globalize) {
-    'use strict';
+import layoutManager from 'layoutManager';
+import loading from 'loading';
+import events from 'events';
+import libraryBrowser from 'libraryBrowser';
+import imageLoader from 'imageLoader';
+import alphaPicker from 'alphaPicker';
+import listView from 'listView';
+import cardBuilder from 'cardBuilder';
+import userSettings from 'userSettings';
+import globalize from 'globalize';
+import 'emby-itemscontainer';
 
-    return function (view, params, tabContent) {
+export default function (view, params, tabContent) {
         function getPageData(context) {
             var key = getSavedQueryKey(context);
             var pageData = data[key];
@@ -263,4 +272,3 @@ define(['layoutManager', 'loading', 'events', 'libraryBrowser', 'imageLoader', '
 
         self.destroy = function () {};
     };
-});

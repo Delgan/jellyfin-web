@@ -1,7 +1,14 @@
-define(['loading', 'events', 'libraryBrowser', 'imageLoader', 'listView', 'cardBuilder', 'userSettings', 'globalize', 'emby-itemscontainer'], function (loading, events, libraryBrowser, imageLoader, listView, cardBuilder, userSettings, globalize) {
-    'use strict';
+import loading from 'loading';
+import events from 'events';
+import libraryBrowser from 'libraryBrowser';
+import imageLoader from 'imageLoader';
+import listView from 'listView';
+import cardBuilder from 'cardBuilder';
+import userSettings from 'userSettings';
+import globalize from 'globalize';
+import 'emby-itemscontainer';
 
-    return function (view, params, tabContent) {
+export default function (view, params, tabContent) {
         function getPageData(context) {
             var key = getSavedQueryKey(context);
             var pageData = data[key];
@@ -254,4 +261,3 @@ define(['loading', 'events', 'libraryBrowser', 'imageLoader', 'listView', 'cardB
 
         self.destroy = function () {};
     };
-});

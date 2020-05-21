@@ -1,7 +1,15 @@
-define(['loading', 'layoutManager', 'userSettings', 'events', 'libraryBrowser', 'alphaPicker', 'listView', 'cardBuilder', 'globalize', 'emby-itemscontainer'], function (loading, layoutManager, userSettings, events, libraryBrowser, alphaPicker, listView, cardBuilder, globalize) {
-    'use strict';
+import loading from 'loading';
+import layoutManager from 'layoutManager';
+import userSettings from 'userSettings';
+import events from 'events';
+import libraryBrowser from 'libraryBrowser';
+import alphaPicker from 'alphaPicker';
+import listView from 'listView';
+import cardBuilder from 'cardBuilder';
+import globalize from 'globalize';
+import 'emby-itemscontainer';
 
-    return function (view, params, tabContent, options) {
+export default function (view, params, tabContent, options) {
         function onViewStyleChange() {
             if (self.getCurrentViewStyle() == 'List') {
                 itemsContainer.classList.add('vertical-list');
@@ -302,4 +310,3 @@ define(['loading', 'layoutManager', 'userSettings', 'events', 'libraryBrowser', 
             itemsContainer = null;
         };
     };
-});

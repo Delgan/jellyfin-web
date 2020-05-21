@@ -1,7 +1,20 @@
-define(['events', 'layoutManager', 'inputManager', 'userSettings', 'libraryMenu', 'mainTabsManager', 'cardBuilder', 'dom', 'imageLoader', 'playbackManager', 'globalize', 'emby-scroller', 'emby-itemscontainer', 'emby-tabs', 'emby-button'], function (events, layoutManager, inputManager, userSettings, libraryMenu, mainTabsManager, cardBuilder, dom, imageLoader, playbackManager, globalize) {
-    'use strict';
+import events from 'events';
+import layoutManager from 'layoutManager';
+import inputManager from 'inputManager';
+import userSettings from 'userSettings';
+import libraryMenu from 'libraryMenu';
+import mainTabsManager from 'mainTabsManager';
+import cardBuilder from 'cardBuilder';
+import dom from 'dom';
+import imageLoader from 'imageLoader';
+import playbackManager from 'playbackManager';
+import globalize from 'globalize';
+import 'emby-scroller';
+import 'emby-itemscontainer';
+import 'emby-tabs';
+import 'emby-button';
 
-    function enableScrollX() {
+function enableScrollX() {
         return !layoutManager.desktop;
     }
 
@@ -417,4 +430,3 @@ define(['events', 'layoutManager', 'inputManager', 'userSettings', 'libraryMenu'
             });
         });
     };
-});
